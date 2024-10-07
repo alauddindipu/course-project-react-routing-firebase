@@ -1,7 +1,22 @@
-import React from "react";
-import {Link, NavLink} from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 export default function Navbar() {
+
+  const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const navLinks = (<> {
     " "
   } < li > {
@@ -13,7 +28,7 @@ export default function Navbar() {
         }
         <li>
         {" "}
-        <NavLink to="/products ">Products</NavLink>{" "}
+        <NavLink to="/products">Products</NavLink>{" "}
  < /li> {
             " "
         }
@@ -32,15 +47,27 @@ export default function Navbar() {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">FreeCourse</a>{" "}
+        <a className="btn btn-ghost text-xl">TechCourse</a>{" "}
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login">
-          <button className="btn btn-outline btn-success">Login</button>{" "}
-        </Link>
+      {user && <span className="mr-3">{user.displayName}</span>}
+      {user ? (
+          <button
+            onClick={handleSignOut}
+            className="btn btn-sm btn-outline btn-success text-md rounded-none"
+          >
+            Logout
+          </button>
+        ) : (
+          <Link to="/login">
+            <button className="btn btn-sm btn-info text-md rounded-none">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>{" "}
   </div>);
