@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import userPic from "../../../assets/image.png";
 
 export default function Navbar() {
 
@@ -33,7 +34,7 @@ export default function Navbar() {
             " "
         }
         </ >);
-  return (<div>
+  return (<div className="sticky top-0 z-50">
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
@@ -47,14 +48,30 @@ export default function Navbar() {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">TechCourse</a>{" "}
+        <Link to="/" className="btn btn-ghost md:text-3xl lg:text-4xl xl:text-4xl">TechBooks</Link>{" "}
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
+        {/* {console.log(user.photoURL)} */}
       {user && <span className="mr-3">{user.displayName}</span>}
+
+      <div
+          tabIndex={0}
+          role="button"
+          className="btn btn-ghost btn-circle avatar mr-3"
+        >
+          <div className="w-10 rounded-full">
+          {user? (<img alt="User" src={user.photoURL} />
+          ):(
+            <img alt="User" src={userPic} />
+          )}
+          </div>
+      </div>
+
       {user ? (
+          
           <button
             onClick={handleSignOut}
             className="btn btn-sm btn-outline btn-success text-md rounded-none"

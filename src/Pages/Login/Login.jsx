@@ -28,9 +28,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("User Login Successful", {
-          position: "top-right",
+          position: "bottom-right",
         });
-        navigate(location?.state ? location.state : "/");
+        navigate(location?.state ? location.state : "/products");
       })
       .catch((error) => {
         console.log(error);
@@ -42,9 +42,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("User Google Login Successful", {
-          position: "top-right",
+          position: "bottom-right",
         });
-        navigate(location?.state ? location.state : "/");
+        navigate(location?.state ? location.state : "/products");
       })
       .catch((error) => {
         console.log(error);
@@ -56,9 +56,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         toast.success("User GitHub Login Successful", {
-          position: "top-right",
+          position: "bottom-right",
         });
-        navigate(location?.state ? location.state : "/");
+        navigate(location?.state ? location.state : "/products");
       })
       .catch((error) => {
         console.log(error);

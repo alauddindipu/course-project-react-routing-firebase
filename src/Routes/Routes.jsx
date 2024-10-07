@@ -3,6 +3,10 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Shared/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import Products from "../Pages/Products";
+import PrivateRoute from "./PrivateRoute";
+import ProductsDetails from "../Pages/ProductsDetails";
+// import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -20,6 +24,18 @@ const routes = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      }, 
+      {
+        path: "/products",
+        element: (<PrivateRoute>
+          <Products></Products>
+        </PrivateRoute>)
+      }, {
+        path: "/products/:id",
+        element: (<PrivateRoute>
+          <ProductsDetails></ProductsDetails>
+        </PrivateRoute>),
+        loader: ({params}) => fetch(`http://localhost:5173/products/${params.id}`)
       }
     ]
   }
