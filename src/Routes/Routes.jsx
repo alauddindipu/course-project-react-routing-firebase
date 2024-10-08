@@ -6,6 +6,8 @@ import Register from "../Pages/Register/Register";
 import Products from "../Pages/Products";
 import PrivateRoute from "./PrivateRoute";
 import ProductsDetails from "../Pages/ProductsDetails";
+import CourseDetails from "../Pages/CourseDetails";
+import Course from "../Pages/Course";
 // import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
@@ -30,12 +32,24 @@ const routes = createBrowserRouter([
         element: (<PrivateRoute>
           <Products></Products>
         </PrivateRoute>)
+      }, 
+      {
+        path: "/course",
+        element: (<PrivateRoute>
+          <Course></Course>
+        </PrivateRoute>)
       }, {
         path: "/products/:id",
         element: (<PrivateRoute>
           <ProductsDetails></ProductsDetails>
         </PrivateRoute>),
         loader: ({params}) => fetch(`http://localhost:5173/products/${params.id}`)
+      }, {
+        path: "/course/:id",
+        element: (<PrivateRoute>
+          <CourseDetails></CourseDetails>
+        </PrivateRoute>),
+        loader: ({params}) => fetch(`http://localhost:5173/course/${params.id}`)
       }
     ]
   }

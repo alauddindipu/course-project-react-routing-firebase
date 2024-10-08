@@ -4,7 +4,7 @@ import Navbar from './Shared/Navbar/Navbar';
 import Footer from './Shared/Footer/Footer';
 import { Link } from "react-router-dom";
 
-const Products = () => {
+const Course = () => {
 
     // const {_id,details} = products;
 
@@ -24,7 +24,7 @@ const Products = () => {
         <div>
     <Navbar></Navbar>
             <div>
-                <p className="text-3xl py-10">Available Products: {course.length}</p>
+                <p className="text-3xl py-10">Available Courses: {course.length}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12 md:gap-12 xl:12 mb-20">
                 {course.map((c) => (
@@ -39,7 +39,7 @@ const Products = () => {
                             <p>{c.author}</p>
                             <p><span className="bg-warning p-2 rounded">{c.price} BDT</span> <span className="bg-success p-2 rounded">{c.ratings}</span></p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary"> <Link to={`/products/${c._id}`}>View Details</Link>
+                                <button className="btn btn-primary"> <Link to={`/course/${c._id}`}>View Details</Link>
                                  </button>
                             </div>
                         </div>
@@ -51,4 +51,4 @@ const Products = () => {
     );
 }
 
-export default Products;
+export default Course;
