@@ -8,8 +8,8 @@ const HowItWorks = () => {
             <ul className="steps">
                 <li className="step step-accent">Register</li>
                 <li className="step step-accent">Choose Products</li>
-                <li className="step step-info">Purchase</li>
-                <li className="step step-info">Receive Products</li>
+                <li className="step step-success">Purchase</li>
+                <li className="step step-success">Receive Products</li>
             </ul>
         </div>
         </div>

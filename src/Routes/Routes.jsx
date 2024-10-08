@@ -27,14 +27,14 @@ const routes = createBrowserRouter([
         path: "/register",
         element: <Register></Register>
       }, 
+      // {
+      //   path: "/products",
+      //   element: (<PrivateRoute>
+      //     <Products></Products>
+      //   </PrivateRoute>)
+      // }, 
       {
         path: "/products",
-        element: (<PrivateRoute>
-          <Products></Products>
-        </PrivateRoute>)
-      }, 
-      {
-        path: "/course",
         element: (<PrivateRoute>
           <Course></Course>
         </PrivateRoute>)
@@ -47,7 +47,7 @@ const routes = createBrowserRouter([
       //   loader: ({params}) => fetch(`http://localhost:5173/products/${params.id}`)
       // },
        {
-        path: "/course/:id",
+        path: "/products/:id",
         element: (<PrivateRoute>
           <CourseDetails></CourseDetails>
         </PrivateRoute>),

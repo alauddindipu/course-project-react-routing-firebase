@@ -39,7 +39,7 @@ const Course = () => {
                             <p>{c.author}</p>
                             <p><span className="bg-warning p-2 rounded">{c.price} BDT</span> <span className="bg-success p-2 rounded">{c.ratings}</span></p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary"> <Link to={`/course/${c._id}`}>View Details</Link>
+                                <button className="btn btn-primary"> <Link to={`/products/${c._id}`}>View Details</Link>
                                  </button>
                             </div>
                         </div>

@@ -29,7 +29,7 @@ export default function Navbar() {
         }
         <li>
         {" "}
-        <NavLink to="/course">Products</NavLink>{" "}
+        <NavLink to="/products">Products</NavLink>{" "}
  < /li> {
             " "
         }
@@ -48,10 +48,10 @@ export default function Navbar() {
             {navLinks}
           </ul>
         </div>
-        <Link to="/" className="bg-accent">
+        <Link to="/" className="">
               <div className="avatar">
-                <div className="mask mask-hexagon w-24">
-                  <img src="src\assets\logo-book.jpg" />
+                <div className="bg-accecnt mask mask-hexagon w-24">
+                  <img src="src\assets\logo-book.jpg" alt="BooKTech"/>
                 </div>
               </div>
         </Link>{" "}
@@ -80,13 +80,13 @@ export default function Navbar() {
           
           <button
             onClick={handleSignOut}
-            className="btn btn-sm  bg-error text-md rounded"
+            className="btn btn-outline btn-error text-md rounded"
           >
             Logout
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn btn-sm bg-accent text-md rounded">
+            <button className="btn btn-outline btn-success text-md rounded">
               Login
             </button>
           </Link>
