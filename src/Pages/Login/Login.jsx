@@ -30,7 +30,7 @@ const Login = () => {
         toast.success("User Login Successful", {
           position: "bottom-right",
         });
-        navigate(location?.state ? location.state : "/products");
+        navigate(location?.state ? location.state : "/course");
       })
       .catch((error) => {
         console.log(error);
@@ -44,7 +44,7 @@ const Login = () => {
         toast.success("User Google Login Successful", {
           position: "bottom-right",
         });
-        navigate(location?.state ? location.state : "/products");
+        navigate(location?.state ? location.state : "/course");
       })
       .catch((error) => {
         console.log(error);
@@ -58,7 +58,7 @@ const Login = () => {
         toast.success("User GitHub Login Successful", {
           position: "bottom-right",
         });
-        navigate(location?.state ? location.state : "/products");
+        navigate(location?.state ? location.state : "/course");
       })
       .catch((error) => {
         console.log(error);
@@ -127,14 +127,11 @@ const Login = () => {
                         />
                       </div>
                     </div>
-                    <p className="mt-2 cursor-pointer text-blue-500 hover:text-blue-600">
-                      Forgot password?
-                    </p>
                   </div>
                   <div className="flex flex-col gap-2">
                     <button
                       type="submit"
-                      className="btn btn-outline btn-info rounded-none"
+                      className="btn bg-success btn-info rounded-none"
                     >
                       <span className="flex items-center justify-center gap-1 font-medium py-1 px-2.5 text-base false">
                         Login

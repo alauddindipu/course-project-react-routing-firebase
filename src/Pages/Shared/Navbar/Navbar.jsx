@@ -48,7 +48,13 @@ export default function Navbar() {
             {navLinks}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost md:text-3xl lg:text-4xl xl:text-4xl">TechBooks</Link>{" "}
+        <Link to="/" className="bg-accent">
+              <div className="avatar">
+                <div className="mask mask-hexagon w-24">
+                  <img src="src\assets\logo-book.jpg" />
+                </div>
+              </div>
+        </Link>{" "}
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -74,13 +80,13 @@ export default function Navbar() {
           
           <button
             onClick={handleSignOut}
-            className="btn btn-sm btn-outline btn-success text-md rounded-none"
+            className="btn btn-sm  bg-error text-md rounded"
           >
             Logout
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn btn-sm btn-info text-md rounded-none">
+            <button className="btn btn-sm bg-accent text-md rounded">
               Login
             </button>
           </Link>
