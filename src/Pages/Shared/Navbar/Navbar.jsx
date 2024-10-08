@@ -29,7 +29,7 @@ export default function Navbar() {
         }
         <li>
         {" "}
-        <NavLink to="/products">Products</NavLink>{" "}
+        <NavLink to="/course">Products</NavLink>{" "}
  < /li> {
             " "
         }

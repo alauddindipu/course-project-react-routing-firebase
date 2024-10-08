@@ -4,13 +4,13 @@ import Navbar from "./Shared/Navbar/Navbar";
 import Footer from "./Shared/Footer/Footer";
 import {Link} from "react-router-dom";
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 const Products = () => {
-=======
-const Products = ({products}) => {
-  //upper line is not correctly sending props
-  // const {_id,details} = products;
->>>>>>> e1be199b075b19cd56494625bf68c7550c37c74f
+// =======
+// const Products = ({products}) => {
+//   //upper line is not correctly sending props
+//   // const {_id,details} = products;
+// >>>>>>> e1be199b075b19cd56494625bf68c7550c37c74f
 
   const [course, setCourse] = useState([]);
 
