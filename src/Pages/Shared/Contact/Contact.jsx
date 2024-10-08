@@ -26,7 +26,7 @@ const Contact = () => {
                             <label for="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
                             <textarea id="message" rows="6" className="input input-bordered input-accent w-full h-full"></textarea>
                         </div>
-                        <button className="btn btn-active btn-accent px-20 py-5">Send</button>
+                        <div className='flex justify-center'><button className="btn btn-active btn-accent px-20 py-5">Send</button></div>
                     </form>
                 </div>
             </section>

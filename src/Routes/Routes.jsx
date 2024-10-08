@@ -51,8 +51,7 @@ const routes = createBrowserRouter([
         element: (<PrivateRoute>
           <CourseDetails></CourseDetails>
         </PrivateRoute>),
-        // loader: ({params}) => fetch(`http://localhost:5173/course/${params.id}`)
-        loader: ({params}) => fetch(`http://localhost:5173/products/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5173/course/${params.id}`)
       }
     ]
   }

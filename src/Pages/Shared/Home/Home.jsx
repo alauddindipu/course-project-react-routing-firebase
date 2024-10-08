@@ -28,9 +28,10 @@ export default function Home() {
         <HowItWorks></HowItWorks>
       </div>
      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12 md:gap-12 xl:12">
+      <div className="flex justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8 lg:gap-12 md:gap-12 xl:12">
             {course.map((c) => (
-            <div className="card card-compact bg-base-100 w-96 shadow-xl" key={c.course_id}>
+            <div className="card card-compact bg-base-100 w-40 h-60 shadow-xl" key={c.course_id}>
               <figure>
                 <img
                   src={c.img_url}
@@ -39,13 +40,17 @@ export default function Home() {
               <div className="card-body">
                 <h2 className="card-title">{c.title}</h2>
                 <p>{c.author}</p>
-                <p><span className="bg-warning p-2 rounded">{c.price} BDT</span> <span className="bg-success p-2 rounded">{c.ratings}</span></p>
-                <div className="card-actions justify-end">
+                <p>
+                  {/* <span className="bg-warning p-2 rounded">{c.price} BDT</span> */}
+                 <span className="bg-success p-2 rounded">{c.ratings}</span></p>
+                {/* <div className="card-actions justify-end">
                   <button className="btn btn-primary">Buy Now</button>
-                </div>
+                </div> */}
               </div>
             </div>
             ))}
+      </div>
+
       </div>
       <div>
         <Contact></Contact>

@@ -34,7 +34,7 @@ export default function Navbar() {
             " "
         }
         </ >);
-  return (<div className="sticky top-0 z-50">
+  return (<div className="sticky top-0 z-50 shadow rounded">
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
