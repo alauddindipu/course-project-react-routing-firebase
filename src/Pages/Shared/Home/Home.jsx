@@ -10,7 +10,7 @@ export default function Home() {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/course`).then(res => res.json()).then(data => setCourse(data));
+    fetch(`https://course-project-react-route-86ggir4kk-alauddindipus-projects.vercel.app/course`).then(res => res.json()).then(data => setCourse(data));
   }, []);
   console.log(course);
 

@@ -31,7 +31,7 @@ const Login = () => {
         location
         ?.state
           ? location.state
-          : "/course");
+          : "/products");
     }).catch(error => {
       console.log(error);
     });
@@ -45,7 +45,7 @@ const Login = () => {
         location
         ?.state
           ? location.state
-          : "/course");
+          : "/products");
     }).catch(error => {
       console.log(error);
     });
@@ -59,7 +59,7 @@ const Login = () => {
         location
         ?.state
           ? location.state
-          : "/course");
+          : "/products");
     }).catch(error => {
       console.log(error);
     });
