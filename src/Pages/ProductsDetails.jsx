@@ -12,7 +12,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {Link, Navigate, useParams} from "react-router-dom";
 import {AuthContext} from "../Provider/AuthProvider";
-//import {AuthContext} from "../../Provider/AuthProvider";
 
 const ProductsDetails = () => {
   const {user} = useContext(AuthContext);
