@@ -10,8 +10,6 @@ const Register = () => {
 
   const handleRegister = (event) => {
     event.preventDefault();
-    // const name = event.target.name.value;
-    // console.log(name);
 
     const form = new FormData(event.currentTarget);
     console.log(form);
@@ -154,20 +152,11 @@ const Register = () => {
                         />
                       </div>
                     </div>
-                    <div className="flex items-center mt-4">
-                      <input
-                        type="checkbox"
-                        className="checkbox checkbox-info"
-                      />
-                      <Link className="label-text text-blue-700 ml-2">
-                        Accept Terms and Conditions
-                      </Link>
-                    </div>
                   </div>
                   <div className="flex flex-col gap-2">
                     <button
                       type="submit"
-                      className="btn btn-outline btn-info rounded-none"
+                      className="btn bg-success btn-info rounded"
                     >
                       <span className="flex items-center justify-center gap-1 font-medium py-1 px-2.5 text-base false">
                         Register

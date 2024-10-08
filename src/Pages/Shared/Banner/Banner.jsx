@@ -13,9 +13,9 @@ const Banner = () => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-2xl font-bold">Welcome</h1>
                         <p className="mb-5">
-                        Stay ahead in the fast-paced tech world with <span className='text-2xl'>TechBooks!</span> Elevate your skills and knowledge—grab your copy today!
+                        Stay ahead in the fast-paced tech world. Elevate your skills and knowledge—grab your copy today!
                         </p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <button className="btn btn-accent">Get Started</button>
                     </div>
                 </div>
             </div>
