@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     // fetch(`https://course-project-react-route-86ggir4kk-alauddindipus-projects.vercel.app/course`)
-    fetch(`https://course-project-react-route.vercel.app/course`)
+    fetch(`course-project-react-routing-firebase-server.vercel.app/course`)
     .then(res => res.json()).then(data => setCourse(data));
   }, []);
   console.log(course);
