@@ -32,7 +32,7 @@ const routes = createBrowserRouter([
         element: (<PrivateRoute>
           <CourseDetails></CourseDetails>
         </PrivateRoute>),
-        loader: ({params}) => fetch(`course-project-react-routing-firebase-server.vercel.app/course/${params.id}`)
+        loader: ({params}) => fetch(`https://course-project-react-routing-firebase.onrender.com/course/${params.id}`)
       }
     ]
   }

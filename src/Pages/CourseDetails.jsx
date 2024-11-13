@@ -9,7 +9,7 @@ const CourseDetails = () => {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch(`https://course-project-react-routing-firebase-server.vercel.app/course/${id}`)
+    fetch(`https://course-project-react-routing-firebase.onrender.com/course/${id}`)
     .then(res => res.json()).then(data => setCourse(data));
   }, []);
   console.log(course);
