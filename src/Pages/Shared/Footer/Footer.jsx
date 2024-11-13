@@ -1,4 +1,5 @@
 import React from "react";
+import ownerPic from "../../../assets/owner.png";
 
 export default function Footer() {
   return (<div>
@@ -28,7 +29,7 @@ export default function Footer() {
     {/* <img src="src\assets\owner.png" alt="" /> */}
     <div className="avatar">
   <div className="w-24 rounded-full size-5">
-    <img src="src\assets\owner.png" />
+    <img src={ownerPic} />
   </div>
 </div>
     <p>
